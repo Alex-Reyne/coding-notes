@@ -1,0 +1,97 @@
+
+<!-- https://www.christhefreelancer.com/shopify-liquid-guide/ -->
+
+
+<!-- Basics -->
+{{ code }} to output data (non-logic code)
+{% code %} for everything else (logic-containing code)
+{%- code -%} prevents tag from generating whitespace
+
+
+<!-- Variable Assignment -->
+{% assign collection = collections[‘featured-collection’] %} <!-- or can use ‘all’ -->
+
+
+<!-- Filters -->
+{% assign num = 5 %}
+{{ num | plus 5 }} <!-- plus 5 to add -->
+{% assign array_string = "Mike,Chris,Bob,Denise,Clinton" %}
+{% assign array = array_string | split: "," %} <!-- split: “,” to remove delimiter -->
+
+
+<!-- For Loop -->
+{% for name in array %}
+	{% if name.size < 4 %}
+	{% endif %}
+{% endfor %}
+
+
+<!-- Global Objects -->
+- available anywhere in theme
+- all_products, pages, blogs, collections
+
+
+<!-- Objects -->
+
+{% assign collection = collections['featured-collection'] %}
+{% assign collection = collections['all'] %}
+{{ collection.title }}
+<ul>
+	{% for product in collection.products %}
+		<li>
+			<a href=“{{ product.url }}”>
+				{{ product.title }} - {{ product.price | money }}
+				{% if product.available != true %}
+					(SOLD OUT)
+				{% endif %}
+			</a>
+		</li>
+	{% endfor %}
+</ul>
+
+<!-- Using JSON Schemas (Theme Data) -->
+<!-- settings_schema.json -->
+<!-- will show up in customizer -->
+
+[
+	{
+		"name": "theme_info",
+		"theme_name": "Themekit template theme",
+		"theme_version": "1.0.0",
+		"theme_author": "Shopify",
+	},
+	{
+		"name": "Colors",
+		"settings": [
+			{
+				"type": "color",
+				"id": "link_color",
+				"label": "Link Color",
+				"default": "#000"
+			},
+			{
+				"type": "text",
+				"id": "text",
+				"label": "Text",
+				"default": "value",
+				"info": "Text",
+				"placeholder": "Text"
+			}
+		]
+	}
+]
+
+{% assign collection = collections['all'] %}
+{{ collection.title }}
+<ul>
+	{% for product in collection.products %}
+		<li>
+			<a style="color:{{ settings.link_color }}" href="{{ product.url }}">
+				{{ product.title }} - {{ product.price | money }}
+				{% if product.available != true %}
+					(SOLD OUT)
+				{% endif %}
+			</a>
+		</li>
+	{% endfor %}
+</ul>
