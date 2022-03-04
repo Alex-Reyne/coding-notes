@@ -15,21 +15,19 @@ SECTION > main-collection-product-grid.liquid
       {{ variant | json }} => prints complete dump
     {% endfor %}
     
-```html
-  <div class="overlay-variants">
-    {% for variant in card_product.variants %}
-      {% for option in variant.options %}
-        - {{ option }}
-      {% endfor %}
-      <br/>
-    {% endfor %}
-  </div>
-```
 
+
+188: div id="ProductInfo-{{ section.id }}"
+316-340: when 'variant_picker'
+342-?: <variant-selects>
 
 
 SECTION > main-product.liquid
-- single product page
+- product page
+- 394-432: 'Add to cart' form button
+  <product-form></product-form>
+
+
 
 
 # WHAT I NEED TO DO
