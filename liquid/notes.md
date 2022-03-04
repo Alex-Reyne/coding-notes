@@ -14,20 +14,15 @@ SECTION > main-collection-product-grid.liquid
       {{ variant.inventory_quantity }}
       {{ variant | json }} => prints complete dump
     {% endfor %}
-    
-
 
 188: div id="ProductInfo-{{ section.id }}"
 316-340: when 'variant_picker'
 342-?: <variant-selects>
 
-
 SECTION > main-product.liquid
 - product page
 - 394-432: 'Add to cart' form button
   <product-form></product-form>
-
-
 
 
 # WHAT I NEED TO DO
