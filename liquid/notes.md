@@ -60,11 +60,6 @@ product.tags
 
 
 
-
-
-
-
-
 # Theme tags
 
 ## Render
