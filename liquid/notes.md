@@ -24,6 +24,14 @@ SECTION > main-product.liquid
 - 394-432: 'Add to cart' form button
   <product-form></product-form>
 
+ASSETS > global.js
+- 736: VariantSelects -> `variant-selects`
+  - need querySelector for `fieldset`
+- 893: VariantRadios -> `variant-radios`
+
+
+
+
 
 # WHAT I NEED TO DO
 - Just follow main-product.liquid page
@@ -31,10 +39,16 @@ SECTION > main-product.liquid
 - move the thing into card-product snippet
 ProductInfo-template--15180695142556__main
 
-
 products/new-balance-ms327lu1-rain-cloud
 color: violet, green, black, lightblue, red, blue
 size: 7, 8, 9
+
+
+
+
+
+
+
 
 
 # Objects
