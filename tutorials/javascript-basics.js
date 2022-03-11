@@ -1,6 +1,6 @@
 // this is a test file
 
-/*
+
 let y = 'this is a sentence';
 console.log(y);
 
@@ -21,17 +21,17 @@ console.log(typeof num);
 
 const constantVariable = 10;
 console.log(constantVariable);
-*/
 
-/*
+
+
 // Booleans (true or false)
 let a = 100;
 console.log(a === 100);
 console.log(a === 99);
 console.log(a >= 99);
-*/
 
-/* // Conditional
+
+// Conditional
 let babyStatus = 'crying';
 
 if (babyStatus === 'not crying') {
@@ -49,13 +49,11 @@ if (false) {
 }
 
 console.log(greeting);
-*/
+
 
 // For Loop
 
 // initial value; condition as long as true; iteration counter up/down
-
-
 // at beginning of for loop, i = 0
 for (let i = 5; i <= 10; i++) {
   // run if i <= 10, stop if hits 11
