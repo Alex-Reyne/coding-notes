@@ -1,0 +1,62 @@
+
+
+# Install Command Line Tools
+```sh
+# Check if already installed
+xcode-select-p # should output: /Library/Developer/CommandLineTools
+# Check if gcc and clang installed
+gcc -v
+clang -v
+
+# Install command line tools
+xcode-select --install # will return error if already installed
+```
+
+# Install Yarn
+```sh
+# Check if yarn already installed
+yarn --version
+#  Install yarn via npm
+npm install --global yarn
+```
+
+# Install rbenv (ruby version manager)
+```sh
+# Check if rbenv already installed
+rbenv
+
+# Check LHL notes
+```
+
+# Install ruby
+```sh
+# Check if ruby already installed
+ruby -v
+# Install ruby
+rbenv install 2.6.6 # Install ruby version
+```
+
+# Install Rails 6
+```sh
+# Check if bundler installed
+bundle -v
+
+# Check list of local gems installed
+gem list
+
+# Install rails
+gem install rails
+# Check if rails installed
+gem list rails
+```
+
+# Create new rails project
+```sh
+# Create new directory for rails projects
+mkdir <new_project_name> # rails_6_projects
+cd <new_project_name>
+# Create new rails application
+rails new <new_application_name> # new_test_app_6
+
+
+```
