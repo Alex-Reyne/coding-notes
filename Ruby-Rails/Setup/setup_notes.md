@@ -45,18 +45,37 @@ bundle -v
 gem list
 
 # Install rails
-gem install rails
+gem install rails # defaults to v 6.1.5
 # Check if rails installed
 gem list rails
+rails -v
 ```
 
 # Create new rails project
 ```sh
-# Create new directory for rails projects
+# Create new directory for rails 6 projects
 mkdir <new_project_name> # rails_6_projects
 cd <new_project_name>
 # Create new rails application
-rails new <new_application_name> # new_test_app_6
+rails new <new_app_name> # new_test_app_6
 
+# Start rails server app
+rails s
+# Visit web page in browser
+localhost:3000
+```
+
+# Install Rails 5
+```sh
+# Create new directory for rails 5 projects
+mkdir <new_project_name> # rails_5_projects
+cd <new_project_name>
+
+# Check old version of rails is installed
+gem install # rails (5.2.4.1)
+
+
+# use this version to create a new rails app
+rails _<rails_version>_ new <new_app_name> # _5.2.4.1_ test_app_5
 
 ```
