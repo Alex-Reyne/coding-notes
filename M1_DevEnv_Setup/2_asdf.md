@@ -1,9 +1,25 @@
+# asdf
+# zshrc
+# yarn
+
+
 # Install asdf
 - manage multiple runtime versions: gvm, nvm, rbenv, pyenv
 
 ```sh
-brew install asdf         # Install asdf version manager
-which asdf                # install check
+brew install asdf   # Install asdf version manager
+which asdf          # install check
+
+# asdf commands
+  # http://asdf-vm.com/manage/commands.html
+asdf plugin list                        # List installed plugins
+asdf plugin list all                    # List all plugins
+asdf plugin add <name>                  # Install plugin
+asdf install <name> <version>           # Install a specific ver of a package
+asdf install <name> latest[:<version>]  # Install latest stable ver beginning w/ str
+asdf list <name>                        # List installed versions of package
+asdf current                            # Show current ver being used for all packages
+asdf current <name>                     # Display current ver for package
 
 # Ruby
 asdf plugin add ruby      # install ruby plugin
@@ -21,26 +37,18 @@ asdf global python 3.7.10   # set global python version
 asdf local python 3.7.10    # set local python version
 python -- version           # check python version
 
-# Install i386 versions
-izsh # switch to i386 mode (Rosetta)
-asdf install ruby 2.5.1 # 2.6.6
-asdf install python 2.7.18
-
 # Nodejs
 asdf plugin add nodejs    # install nodejs plugin
 asdf local nodejs latest  # installs latest nodejs version locally
 
-# asdf commands
-  # http://asdf-vm.com/manage/commands.html
-asdf plugin list                        # List installed plugins
-asdf plugin list all                    # List all plugins
-asdf install <name> <version>           # Install a specific ver of a package
-asdf install <name> latest[:<version>]  # Install latest stable ver beginning w/ str
-asdf current                            # Show current ver being used for all packages
-asdf current <name>                     # Display current ver for package
-
+# Install i386 versions
+izsh  # switch to i386 mode (Rosetta)
+asdf install ruby 2.5.1 # 2.6.6
+asdf install python 2.7.18
+mzsh  # switch back to arm64 mode
 
 asdf plugin add awsebcli
+# ...to be continued
 ```
 
 # Modify zshrc

@@ -1,57 +1,61 @@
+# Command Line Tools
+# Yarn
+# Ruby Version Manager
+# Ruby
+# Gems: Bundler, webpacker
+# Rails
 
 
 # Install Command Line Tools
 ```sh
 # Check if already installed
-xcode-select-p # should output: /Library/Developer/CommandLineTools
+xcode-select -p # should output: /Library/Developer/CommandLineTools
 # Check if gcc and clang installed
 gcc -v
 clang -v
-
 # Install command line tools
 xcode-select --install # will return error if already installed
 ```
 
 # Install Yarn
 ```sh
-# Check if yarn already installed
-yarn --version
-#  Install yarn via npm
-npm install --global yarn
-npm list -g # list global packages
-
+yarn --version            # Check if yarn already installed
+npm install --global yarn # Install yarn via npm
+npm list -g               # list global packages
 ```
 
-# Install rbenv (ruby version manager)
+# Install Ruby Version Manager: asdf, rvm, or rbenv
 ```sh
-# Check if rbenv already installed
-rbenv
-
-# Check LHL notes
+# Check M1_DevEnv_Setup folder
 ```
 
-# Install ruby
+# Install Ruby
 ```sh
-# Check if ruby already installed
-ruby -v
-# Install ruby
-rbenv install 2.6.6 # Install ruby version
+ruby -v                 # Check global version of ruby installed
+asdf list ruby          # Check ruby versions already installed
+asdf install ruby 2.6.3 # Install ruby version (2.6.3 for course)
+asdf global ruby 2.6.3  # Set global ruby ver
+# if issues, may have to reinstall homebrew
+```
+
+# Install Gems: Bundler, webpacker
+```sh
+bundle -v             # Check if bundler installed
+gem install bundler
+gem install webpacker
+gem environment       # Check gem installation directory
 ```
 
 # Install Rails 6
 ```sh
-# Check if bundler installed
-bundle -v
-
-# Check list of local gems installed
-gem list
-
-# Install rails
-gem install rails # defaults to v 6.1.5
-# Check if rails installed
-gem list rails
-rails -v
+gem install rails             # Install rails; defaults to latest stable ver
+gem install rails -v 6.0.2.1  # Install rails ver (6.0.2.1 for course)
+gem list                      # Check list of local gems installed
+gem list rails                # Check if rails installed
+rails -v                      # Check rails ver
 ```
+
+
 
 # Create new rails project
 ```sh

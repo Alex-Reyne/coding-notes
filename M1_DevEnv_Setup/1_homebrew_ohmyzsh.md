@@ -1,3 +1,9 @@
+# Homebrew
+# oh-my-zsh
+# oh-my-zsh theme
+# zshrc
+
+
 # Install/Reinstall Homebrew
 ```sh
 # Uninstall homebrew
