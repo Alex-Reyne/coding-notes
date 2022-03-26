@@ -18,6 +18,8 @@ xcode-select --install # will return error if already installed
 yarn --version
 #  Install yarn via npm
 npm install --global yarn
+npm list -g # list global packages
+
 ```
 
 # Install rbenv (ruby version manager)
