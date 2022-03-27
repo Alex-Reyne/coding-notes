@@ -63,4 +63,24 @@ puts
 
 # Iteration
 puts "-" * 20, "Iteration"
-p arr = ("a".."f").to_a # => ["a", "b", "c", "d", "e", "f"]
+p arr = ("a".."c").to_a # => ["a", "b", "c"]
+# Conventional for loop
+for i in arr
+  print i + " "
+end
+puts
+# Ruby approach
+arr.each do |i|
+  print i + " "
+end
+puts
+# Further simplified
+arr.each {|i| print i + " "}
+puts
+arr.each {|i| print i.capitalize + " "}
+puts
+
+# Select method
+p z = (1..10).to_a.shuffle
+p z.select {|number| number.odd?} # selects only odd numbers
+
