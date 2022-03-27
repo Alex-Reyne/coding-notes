@@ -1,6 +1,7 @@
 # asdf
 # zshrc
-# yarn
+# asdf: ruby, python, nodejs
+# asdf: yarn
 
 
 # Install asdf
@@ -20,7 +21,18 @@ asdf install <name> latest[:<version>]  # Install latest stable ver beginning w/
 asdf list <name>                        # List installed versions of package
 asdf current                            # Show current ver being used for all packages
 asdf current <name>                     # Display current ver for package
+```
 
+# Modify zshrc
+```s
+# asdf version manager
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# Created by `pipx` on 2022-03-24 19:09:54
+export PATH="$PATH:/Users/highwind/.local/bin"
+```
+
+# Install ruby, python, nodejs
+```sh
 # Ruby
 asdf plugin add ruby      # install ruby plugin
 asdf install ruby latest  # install latest ruby
@@ -38,6 +50,7 @@ asdf local python 3.7.10    # set local python version
 python -- version           # check python version
 
 # Nodejs
+brew install gpg          # install GnuPG to verify authenticity of package
 asdf plugin add nodejs    # install nodejs plugin
 asdf local nodejs latest  # installs latest nodejs version locally
 
@@ -51,18 +64,14 @@ asdf plugin add awsebcli
 # ...to be continued
 ```
 
-# Modify zshrc
-```s
-# asdf version manager
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-# Created by `pipx` on 2022-03-24 19:09:54
-export PATH="$PATH:/Users/highwind/.local/bin"
-```
-
 # Install Yarn
 ```sh
-# Check if yarn already installed
-yarn --version
+yarn --version    # Check if yarn already installed
+
+# Install yarn via asdf
+asdf plugin add yarn
+asdf install yarn latest
+
 #  Install yarn via npm
 npm install --global yarn
 npm list -g # list global packages
