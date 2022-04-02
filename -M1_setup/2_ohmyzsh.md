@@ -4,30 +4,6 @@
 # zshrc
 
 
-# Install/Reinstall Homebrew
-```sh
-# Uninstall homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
-
-# Check brew uninstalled
-which brew  # => brew not found
-brew -v
-
-# Install homebrew
-  # M1: /opt/homebrew
-  # macOS/intel: /usr/local
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Add Homebrew to PATH
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/highwind/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Check brew installed
-which brew    # => /opt/homebrew/bin/brew
-brew list     # See installed brew packages
-brew leaves   # See top-level packages
-```
-
 # Install oh-my-zsh
 ```sh
 # Install oh-my-zsh

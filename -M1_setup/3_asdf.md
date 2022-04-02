@@ -16,11 +16,15 @@ which asdf          # install check
 asdf plugin list                        # List installed plugins
 asdf plugin list all                    # List all plugins
 asdf plugin add <name>                  # Install plugin
+
 asdf install <name> <version>           # Install a specific ver of a package
 asdf install <name> latest[:<version>]  # Install latest stable ver beginning w/ str
 asdf list <name>                        # List installed versions of package
+asdf list all <name>                    # List all versions of a package
 asdf current                            # Show current ver being used for all packages
 asdf current <name>                     # Display current ver for package
+asdf where <name> [<version>]           # Display install path
+asdf which <command>                    # Display path to executable
 ```
 
 # Modify zshrc
