@@ -1,5 +1,3 @@
-# M1 Setup Instructions
-
 # Homebrew
 # Brew: Additional Packages
 
@@ -28,15 +26,18 @@ which brew    # => /opt/homebrew/bin/brew
 brew -v       # brew version
 brew list     # See installed brew packages
 brew leaves   # See top-level packages
+brew cleanup  # remove broken links
+brew doctor   # self-diagnosis tool
+brew update   # run after brew doctor to download new formulae
 ```
 
 # Brew: Additional Packages (Compass)
 ```sh
-# Install Postgresql, libpq, rbenv, ruby-build
+# Install libpq, postgresql
   # build-from-source specifies exact architecture of your machine
-brew install libpq postgres rbenv ruby-build --build-from-source
+brew install libpq postgres --build-from-source
 ```
-```s
+```sh
 # Zsh: for compilers to find libpq you may need to set:
 #  export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
 #  export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"

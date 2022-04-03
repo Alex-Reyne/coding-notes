@@ -1,16 +1,15 @@
-# Homebrew
 # oh-my-zsh
-# oh-my-zsh theme
-# zshrc
+# oh-my-zsh: Create theme
+# zshrc: modify
 
 
-# Install oh-my-zsh
+# oh-my-zsh
 ```sh
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-# Create oh-my-zsh theme
+# oh-my-zsh: Create theme
 ```s
 # dir: ~/.oh-my-zsh/themes/joshdholtz.zsh-theme
 PROMPT="%(?:%{$fg_bold[green]%}➜ $(arch) :%{$fg_bold[red]%}➜ )"
@@ -21,7 +20,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 ```
 
-# Modify zshrc
+# Zshrc: modify
 ```s
 export ZSH="$HOME/.oh-my-zsh"
 # joshdholtz theme shows arch type in the prompt

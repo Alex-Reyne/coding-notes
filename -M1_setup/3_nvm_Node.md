@@ -1,11 +1,10 @@
-# M1 Setup Instructions
-
 # NVM: Node version manager
 # Node
 
 # NVM: Node version manager (Compass)
 ```sh
 # Install nvm
+  # Do not use homebrew to install nvm; otherwise node.js will run on Rosetta (not natively)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 ```
 ```s
