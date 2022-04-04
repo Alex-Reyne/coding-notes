@@ -6,9 +6,14 @@
 # Install Ruby
 ```sh
 ruby -v                 # Check global version of ruby installed
+
+# rbenv - izsh
+rbenv install 2.6.6
+
+# asdf
 asdf list ruby          # Check ruby versions already installed
-asdf install ruby 2.6.3 # Install ruby version (2.6.3 for course)
-asdf global ruby 2.6.3  # Set global ruby ver
+asdf install ruby 2.6.6 # Install ruby version (2.6.3 for course)
+asdf global ruby 2.6.6  # Set global ruby ver
 # if issues, may have to reinstall homebrew
 ```
 
@@ -16,7 +21,10 @@ asdf global ruby 2.6.3  # Set global ruby ver
 ```sh
 bundle -v             # Check if bundler installed
 gem install bundler
+
 gem install webpacker
+  # if build errors
+  gem install activesupport -v 6.1.5
 gem environment       # Check gem installation directory
 ```
 
@@ -25,6 +33,8 @@ gem environment       # Check gem installation directory
 gem install rails             # Install rails; defaults to latest stable ver
 gem install rails -v 6.0.2.1  # Install rails ver (6.0.2.1 for course)
 gem install rails -v 5.2.4.1  # Install rails ver (5.2.4.1 for course)
+  # if build errors
+  brew install shared-mime-info # contains core db of common types
 gem list                      # Check list of local gems installed
 gem list rails                # Check if rails installed
 rails -v                      # Check set rails ver
