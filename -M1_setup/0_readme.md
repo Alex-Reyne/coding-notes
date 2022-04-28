@@ -14,6 +14,9 @@ alias brewr="arch -x86_64 /usr/local/bin/brew $@
 mzsh  # M1/arm64 alias to install to /opt/homebrew/bin/brew
 izsh  # Rosetta/intel/i386 alias to install to /usr/local/homebrew/bin/brew
 brewr # run non-native version of homebrew; use brewr in place of brew
+which brew
+  # arm64 => /opt/homebrew/bin/brew
+  # i386 => /usr/local/Homebrew/bin/brew
 ```
 
 # Rosetta 2

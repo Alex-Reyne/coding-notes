@@ -18,10 +18,10 @@ CREATE ROLE vagrant LOGIN SUPERUSER PASSWORD '123';
 CREATE ROLE labber LOGIN SUPERUSER PASSWORD 'labber';
 
 \du                       -- list users
-\l                        -- list of db
+\l                        -- list all db in psql
 CREATE DATABASE <dbname>; -- Create db
 \c <dbname>               -- Connect to db
-\dt                       -- list tables
+\dt                       -- list tables in db
 \d <tablename>            -- describe table
 ```
 
