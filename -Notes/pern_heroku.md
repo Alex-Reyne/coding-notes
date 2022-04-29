@@ -87,7 +87,7 @@ heroku local web
     heroku local -p 7000
 ```
 
-## Deploy Heoku App
+## Deploy Heroku App
 ```sh
 # Deploy server (cd to root folder of project)
 heroku git:remote -a <app_name>
@@ -106,3 +106,13 @@ heroku logs -t # display live logs
 2. npm install (read package.json and see what depencies need to be installed)
 3. heroku-postbuild script (run after depencies are installed)
 4. Run start script (where node server.js happens)
+
+
+# git-ignore node_modules
+```sh
+# if node_modules already committed/tracked by git, make git forget folder with:
+git rm -r --cached .
+git add .
+git commit -m "remove node_modules folder"
+git push
+```
